@@ -4,11 +4,11 @@ import Container from "./components/Container";
 import EmptyState from "./components/EmptyState";
 import ListingCard from "./components/listings/ListingCard";
 
+export const dynamic = "force/dynamic";
+
 interface HomeProps {
   searchParams: IListingsParams;
 }
-
-export const dynamic = "force/dynamic";
 
 const Home = async ({ searchParams }: HomeProps) => {
   const listings = await getListings(searchParams);
